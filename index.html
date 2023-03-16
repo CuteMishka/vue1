@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>To do list</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="book.ico" type="image/x-icon">
+	<style>
+		body{
+			background-color: #DAC8BD;
+			margin: 0;
+		}
+		.container{
+			width: 100%;
+			display: flex;
+			align-items: center;
+			height: 100vh;
+		}
+		.wrapper{
+			box-sizing: border-box;
+			position: relative;
+			width: 674px;
+			height: 636px;
+			background: #EEBE61;
+			border: 3px solid #F0D99F;
+			box-shadow: 13px 21px 20px 6px rgba(0, 0, 0, 0.25);
+			border-radius: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: auto;
+		}
+		.circle{
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: linear-gradient(180deg, #000000 0%, #545353 99.99%, rgba(0, 0, 0, 0) 100%);
+			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+			left: 10px;
+			top: 10px;
+		}
+		#cir1{
+			left: 20px;
+		}
+		#cir2{
+			left: 82px;
+		}
+		#cir3{
+			left: 148px;
+		}
+		.screpka{
+			box-sizing: border-box;
+			position: absolute;
+			width: 10px;
+			height: 24px;
+			background: #DAC8BD;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			border-radius: 9px;
+			top: -20px;
+			background:linear-gradient(180deg, #000000 0%, #545353 99.99%, rgba(0, 0, 0, 0) 100%);
+		}
+		#scr1{
+			left: 25px;
+		}
+		#scr2{
+			left: 87px;
+		}
+		#scr3{
+			left: 152px;
+		}
+		.text{
+			position: absolute;
+			width: 230px;
+			height: 90px;
+			font-family: 'Koulen', cursive;
+			font-weight: 400;
+			font-size: 52px;
+			line-height: 85px;
+			color: #564325;
+			text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			left: 23px;
+			top: 67px;
+		}
+		.actions{
+			position: absolute;
+			width: 255px;
+			height: 422px;
+			background: linear-gradient(180deg, #FADFB4 0%, #FBC559 100%);
+			box-shadow: 8px 10px 24px rgba(0, 0, 0, 0.25);
+			border-radius: 12px;
+			left: 23px;
+			top: 178px;
+		}
+		.button-add{
+			position: absolute;
+			width: 34px;
+			height: 30px;
+			background: #FACE7B;
+			box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+			border-radius: 13px;
+			right: 10px;
+			top: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: width 0.3s ease;
+			user-select: none;
+		}
+		.button-add:hover{
+		    width: 40px;
+		    transition: ease-in-out 0.3s;
+		    background: #E0C380;
+		    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+		}
+		.button-add:active{
+			transition: ease-in-out 0.1s;
+			box-shadow: 0px 0px 23px 0px rgba(34, 60, 80, 0.2) inset;
+		}
+		.text{
+			user-select: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="wrapper">
+			<div class="screpka" id="scr1"></div>
+			<div class="screpka" id="scr2"></div>
+			<div class="screpka" id="scr3"></div>
+			<div class="circle" id="cir1"></div>
+			<div class="circle" id="cir2"></div>
+			<div class="circle" id="cir3"></div>
+			<div>
+				<span class="text">To do list</span>
+			</div>
+			<div class="actions">
+				<div class="button-add">+</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
