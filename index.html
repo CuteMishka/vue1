@@ -144,25 +144,32 @@
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="wrapper">
-			<div class="screpka" id="scr1"></div>
-			<div class="screpka" id="scr2"></div>
-			<div class="screpka" id="scr3"></div>
-			<div class="circle" id="cir1"></div>
-			<div class="circle" id="cir2"></div>
-			<div class="circle" id="cir3"></div>
-			<div>
-				<span class="text">To do list</span>
-			</div>
-			<div class="actions" id="actions">
-				<input type="text" placeholder="Action!" class="pole" v-model="newElement">
-				<button onclick="newEl()" class="button-add">+</button>
-				<ul class="elements">
-					<li v-for="(element, index) in elements" :key="index">{{element}}</li>
-				</ul>
+	<div id="app">
+		<div class="container">
+			<div class="wrapper">
+				<div class="circle" id="cir1"></div>
+				<div class="circle" id="cir2"></div>
+				<div class="circle" id="cir3"></div>
+				<div class="screpka" id="scr1"></div>
+				<div class="screpka" id="scr2"></div>
+				<div class="screpka" id="scr3"></div>
+				<div class="text">To Do</div>
+				<div class="actions">
+					<div class="task" v-for="(task, index) in tasks" :key="index">
+						<div class="checkbox" :class="{ checked: task.completed }" @click="toggleTaskCompleted(index)"></div>
+						<div class="label">{{ task.description }}</div>
+						<div class="delete" @click="deleteTask(index)"></div>
+					</div>
+					<div class="add-task">
+						<input class="pole" v-model="newTask" @keyup.enter="addTask">
+						<button class="button-add" @click="addTask">+</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+	<script src='https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js'></script>
+	<script src='script.js'></script>
 </body>
+</html>
 </html>

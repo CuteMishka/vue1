@@ -1,15 +1,21 @@
 new Vue({
-	el: '#actions',
-	data: {
-		newElement: '',
-		elements:[
-			{text: 'asdsa'},
-		]
-	},
-	methods: {
-		addEl: function () {
-			this.elements.push(this.newElement.trim());
-			this.newElement = ''
-		}
-	}
-})
+  el: '#app',
+  data: {
+    tasks: [
+      { description: 'Task 1', completed: false },
+      { description: 'Task 2', completed: false },
+      { description: 'Task 3', completed: false }
+    ],
+    newTask: ''
+  },
+  methods: {
+    addTask() {
+      if (this.newTask.trim() === '') return;
+      this.tasks.push({
+        description: this.newTask,
+        completed: false
+      });
+      this.newTask = '';
+    }
+  }
+});
