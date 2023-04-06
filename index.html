@@ -164,6 +164,8 @@
 		}
 		.checkbox2{
 			display: inline;
+			margin-left: 5px;
+			margin-right: -4px;
 		}
 		.delete{
 			display: inline;
@@ -190,7 +192,7 @@
 						<button class="button-add" @click="addTask">+</button>
 					</div>
 					<div class="task" v-for="(task, index) in tasks" :key="index">
-						<input type="checkbox" class="checkbox2" :class="{ checked: task.completed }" @click="toggleText(index)"></input>
+						<input type="checkbox" class="checkbox2" @click="toggleText(index)"></input>
 						<div class="label">{{ task.description }}</div>
 						<button class="delete" @click="deleteTask(index)">X</button>
 					</div>

@@ -2,9 +2,9 @@ new Vue({
   el: '#app',
   data: {
     tasks: [
-      { description: 'Task 1', completed: false },
-      { description: 'Task 2', completed: false },
-      { description: 'Task 3', completed: false }
+      { description: 'Task 1'},
+      { description: 'Task 2'},
+      { description: 'Task 3'}
     ],
     newTask: ''
   },
