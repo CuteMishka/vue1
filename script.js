@@ -18,7 +18,15 @@ new Vue({
       this.newTask = '';
     },
     deleteTask(index) {
-    this.tasks.splice(index, 1)
+      this.tasks.splice(index, 1)
+    },
+    toggleText(index) {
+      label = document.getElementsByClassName("label")[index];
+      if (label.style.textDecoration == "line-through") {
+        label.style.textDecoration = "none";
+      } else {
+        label.style.textDecoration = "line-through";
+      }
     }
   }
 });
