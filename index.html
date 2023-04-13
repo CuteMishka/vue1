@@ -173,6 +173,9 @@
 		.completed{
 			text-decoration: line-through;
 		}
+		.edit{
+			display: inline;
+		}
 	</style>
 </head>
 <body>
@@ -188,13 +191,14 @@
 				<div class="text">To Do</div>
 				<div class="actions">
 					<div class="add-task">
-						<input class="pole" v-model="newTask" @keyup.enter="addTask">
+						<input class="pole" v-model="newTask" @keyup.enter="addTask" placeholder="There..">
 						<button class="button-add" @click="addTask">+</button>
 					</div>
 					<div class="task" v-for="(task, index) in tasks" :key="index">
 						<input type="checkbox" class="checkbox2" @click="toggleText(index)"></input>
 						<div class="label">{{ task.description }}</div>
 						<button class="delete" @click="deleteTask(index)">X</button>
+						<button class="edit" @click="edit(index)" id="edit-button">a</button>
 					</div>
 				</div>
 			</div>

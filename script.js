@@ -2,9 +2,9 @@ new Vue({
   el: '#app',
   data: {
     tasks: [
-      { description: 'Task 1'},
-      { description: 'Task 2'},
-      { description: 'Task 3'}
+      { description: 'Task 1', completed: false },
+      { description: 'Task 2', completed: false },
+      { description: 'Task 3', completed: false }
     ],
     newTask: ''
   },
@@ -18,15 +18,10 @@ new Vue({
       this.newTask = '';
     },
     deleteTask(index) {
-      this.tasks.splice(index, 1)
+      this.tasks.splice(index, 1);
     },
-    toggleText(index) {
-      label = document.getElementsByClassName("label")[index];
-      if (label.style.textDecoration == "line-through") {
-        label.style.textDecoration = "none";
-      } else {
-        label.style.textDecoration = "line-through";
-      }
+    edit(index) {
+      document.querySelector('.pole').placeholder = 'edit here';
     }
   }
 });
