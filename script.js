@@ -15,8 +15,8 @@ new Vue({
         description: this.newTask,
         completed: false
       });
-      if (document.querySelector('.pole').placeholder == 'edit here')(
-        this.tasks.description = document.querySelector('.pole')
+      if (document.querySelector('.pole').placeholder == 'edit')(
+        this.tasks[index].description = document.querySelector('.pole').value
         )
       this.newTask = '';
     },
@@ -24,7 +24,7 @@ new Vue({
       this.tasks.splice(index, 1);
     },
     edit(index) {
-      document.querySelector('.pole').placeholder = 'edit here';
+      document.querySelector('.pole').placeholder = 'edit';
     }
   }
 });
