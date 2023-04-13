@@ -15,6 +15,9 @@ new Vue({
         description: this.newTask,
         completed: false
       });
+      if (document.querySelector('.pole').placeholder == 'edit here')(
+        this.tasks.description = document.querySelector('.pole')
+        )
       this.newTask = '';
     },
     deleteTask(index) {
