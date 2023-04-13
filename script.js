@@ -24,7 +24,8 @@ new Vue({
       this.tasks.splice(index, 1);
     },
     edit(index) {
-      document.querySelector('.pole').placeholder = 'edit';
+      this.tasks[index].description = this.newTask;
+      this.newTask = ''
     }
   }
 });
